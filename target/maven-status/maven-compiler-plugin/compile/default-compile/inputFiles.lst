@@ -1,7 +1,6 @@
-/Users/maureen/Downloads/audit4jusage/src/main/java/zw/co/econet/dev/samples/audit4jusage/configuration/web/WebConfig.java
-/Users/maureen/Downloads/audit4jusage/src/main/java/zw/co/econet/dev/samples/audit4jusage/customs/MyLayout.java
-/Users/maureen/Downloads/audit4jusage/src/main/java/zw/co/econet/dev/samples/audit4jusage/configuration/security/WebSecurity.java
-/Users/maureen/Downloads/audit4jusage/src/main/java/zw/co/econet/dev/samples/audit4jusage/customs/MyMetaData.java
-/Users/maureen/Downloads/audit4jusage/src/main/java/zw/co/econet/dev/samples/audit4jusage/services/CardService.java
-/Users/maureen/Downloads/audit4jusage/src/main/java/zw/co/econet/dev/samples/audit4jusage/configuration/web/WebInitializer.java
-/Users/maureen/Downloads/audit4jusage/src/main/java/zw/co/econet/dev/samples/audit4jusage/configuration/security/SecurityInitialiser.java
+/Users/maureen/Downloads/audit4jusage/src/main/java/zw/co/zaratech/dev/samples/audit4jusage/Audit4JUsageApplication.java
+/Users/maureen/Downloads/audit4jusage/src/main/java/zw/co/zaratech/dev/samples/audit4jusage/rest/GreetingsRestController.java
+/Users/maureen/Downloads/audit4jusage/src/main/java/zw/co/zaratech/dev/samples/audit4jusage/customs/MyMetaData.java
+/Users/maureen/Downloads/audit4jusage/src/main/java/zw/co/zaratech/dev/samples/audit4jusage/configuration/security/WebSecurityConfiguration.java
+/Users/maureen/Downloads/audit4jusage/src/main/java/zw/co/zaratech/dev/samples/audit4jusage/configuration/audit/AuditConfiguration.java
+/Users/maureen/Downloads/audit4jusage/src/main/java/zw/co/zaratech/dev/samples/audit4jusage/services/HelloService.java

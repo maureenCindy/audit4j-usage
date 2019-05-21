@@ -1,5 +1,6 @@
-zw/co/econet/dev/samples/audit4jusage/configuration/web/WebConfig.class
-zw/co/econet/dev/samples/audit4jusage/services/CardService.class
-zw/co/econet/dev/samples/audit4jusage/customs/MyMetaData.class
-zw/co/econet/dev/samples/audit4jusage/configuration/security/WebSecurity.class
-zw/co/econet/dev/samples/audit4jusage/customs/MyLayout.class
+zw/co/zaratech/dev/samples/audit4jusage/configuration/security/WebSecurityConfiguration.class
+zw/co/zaratech/dev/samples/audit4jusage/customs/MyMetaData.class
+zw/co/zaratech/dev/samples/audit4jusage/configuration/audit/AuditConfiguration.class
+zw/co/zaratech/dev/samples/audit4jusage/rest/GreetingsRestController.class
+zw/co/zaratech/dev/samples/audit4jusage/Audit4JUsageApplication.class
+zw/co/zaratech/dev/samples/audit4jusage/services/HelloService.class

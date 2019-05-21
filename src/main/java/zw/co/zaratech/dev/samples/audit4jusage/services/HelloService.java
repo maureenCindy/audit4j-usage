@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class HelloService {
 
-    @Audit
+    @Audit(action = "HelloService.hello")
     public String hello(@AuditField(field="name") String name,
                         @AuditField(field="surname") String surname) {
         return "Greetings "+name + " "+ surname;

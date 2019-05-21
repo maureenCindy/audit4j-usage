@@ -11,7 +11,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
  * @author maureen on 12/5/2019
  */
 
-//for annotations
 public class MyMetaData implements MetaData {
 
 
