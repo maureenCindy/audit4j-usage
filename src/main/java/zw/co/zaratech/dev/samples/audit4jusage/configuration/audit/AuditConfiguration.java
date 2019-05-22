@@ -9,13 +9,11 @@ import org.audit4j.core.layout.SimpleLayout;
 import org.audit4j.handler.db.DatabaseAuditHandler;
 import org.audit4j.integration.spring.AuditAspect;
 import org.audit4j.integration.spring.SpringAudit4jConfig;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import zw.co.zaratech.dev.samples.audit4jusage.customs.MyMetaData;
 
-import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -41,7 +39,6 @@ public class AuditConfiguration {
     @Bean
     public DatabaseAuditHandler databaseHandler() {
         DatabaseAuditHandler databaseHandler = new DatabaseAuditHandler();
-        databaseHandler.setEmbedded("false");
         databaseHandler.setEmbedded("false");
         databaseHandler.setDb_user("root");
         databaseHandler.setDb_password("P@ssw0rd#");

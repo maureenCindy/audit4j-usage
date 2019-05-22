@@ -11,8 +11,9 @@ import org.springframework.stereotype.Service;
 public class HelloService {
 
     @Audit(action = "HelloService.hello")
-    public String hello(@AuditField(field="name") String name,
-                        @AuditField(field="surname") String surname) {
-        return "Greetings "+name + " "+ surname;
+    public String hello(@AuditField(field="loggedInUsername") String name) {
+        return "Welcome "  + name;
     }
 }
+
+

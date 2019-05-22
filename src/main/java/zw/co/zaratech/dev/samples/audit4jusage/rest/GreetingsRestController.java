@@ -1,8 +1,10 @@
 package zw.co.zaratech.dev.samples.audit4jusage.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import zw.co.zaratech.dev.samples.audit4jusage.services.HelloService;
 
@@ -15,10 +17,13 @@ public class GreetingsRestController {
     @Autowired
     HelloService helloService;
 
-    @GetMapping(value = "greetings/{name}/{surname}", produces = "application/json")
-    public String welcome(@PathVariable String name, @PathVariable String surname) {
-        return helloService.hello(name,surname);
+    @GetMapping(value = {"/", "/welcome"}, produces = "application/json")
+    public String welcome() {
+        String name= "anonymous";
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication != null && authentication.getPrincipal() instanceof UserDetails) {
+            name= ((UserDetails) authentication.getPrincipal()).getUsername();
+        }
+        return helloService.hello(name);
     }
-
-
 }
