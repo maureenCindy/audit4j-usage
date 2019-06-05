@@ -38,9 +38,9 @@ jobs:
         key: audit4jusage-{{ checksum "pom.xml" }}
 
     # run tests!
-    - run:
-      - mvn integration-test
-      - mvn package
+    - run: mvn integration-test
+
+    - run: mvn package
 
     - store_test_results:
             path: target/surefire-reports
