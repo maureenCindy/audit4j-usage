@@ -4,7 +4,7 @@
 #
 version: 2
 workflows:
-  "Audit4JUsage Workflow":
+  "Audit4JUsage Workflow"
     jobs:
       audit4jusage-build:
         docker:
