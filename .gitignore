@@ -1,20 +1,5 @@
 target/
 
-
-
-
-# Log file
-*.log
-
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-.classpath
 .project
 
 # Editor and IDE Specific
