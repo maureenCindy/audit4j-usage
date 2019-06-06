@@ -46,7 +46,7 @@ jobs:
         # fallback to using the latest cache if no exact match is found
         - audit4jusage-
 
-    - run: mvn dependency:go offline
+    - run: mvn dependency:go-offline
 
     - save_cache:
         paths:
