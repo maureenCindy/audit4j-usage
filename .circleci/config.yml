@@ -23,21 +23,17 @@ jobs:
     environment:
       # Customize the JVM maximum heap limit
       MAVEN_OPTS: -Xmx3200m
-      MYSQL_ALLOW_EMPTY_PASSWORD: yes
-      MYSQL_PASSWORD: ''
-      MYSQL_USER: 'root'
-      MYSQL_DB: circle-test
+      MYSQL_ROOT_PASSWORD: 'P@ssw0rd#'
 
     steps:
     - checkout
+
+    - run: sudo apt-get install mysql-client
 
     - run:
         name: Wait for Database Connection
         # preinstalled in circleci/* docker image
         command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
-        environment:
-          DATABASE_URL: "jdbc:mysql://127.0.0.1:3306/circle-test?useSSL=FALSE"
-
 
 
     # Download and cache dependencies
@@ -46,6 +42,9 @@ jobs:
         - audit4jusage-{{ checksum "pom.xml" }}
         # fallback to using the latest cache if no exact match is found
         - audit4jusage-
+
+        # prepare the database
+    - run: mysqladmin create auditdb --host="127.0.0.1" --user="root" --password="P@ssw0rd#"
 
     - run: mvn dependency:go-offline
 
