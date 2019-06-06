@@ -11,7 +11,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-import zw.co.zaratech.dev.samples.audit4jusage.services.HelloService;
 
 import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -23,9 +22,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class Audit4jUsageApplicationTests {
-
-    @Autowired
-    HelloService helloService;
 
     @Autowired
     private WebApplicationContext context;
@@ -42,7 +38,7 @@ public class Audit4jUsageApplicationTests {
 
 
 
-    @WithMockUser("user")
+    @WithMockUser
     @Test
     public void givenAuthRequestOnPrivateService_shouldSucceedWith200() throws Exception {
         mvc.perform(get("/welcome").contentType(MediaType.APPLICATION_JSON))
