@@ -37,12 +37,6 @@ jobs:
         environment:
           DATABASE_URL: "jdbc:mysql://localhost:3306/audit4j?useSSL=FALSE"
 
-    # Download and cache dependencies
-    - restore_cache:
-        keys:
-        - audit4jusage-{{ checksum "pom.xml" }}
-        # fallback to using the latest cache if no exact match is found
-        - audit4jusage-
 
     - run: mvn spring-boot:run
 
