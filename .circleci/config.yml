@@ -54,6 +54,10 @@ jobs:
         - ~/.m2
         key: audit4jusage-{{ checksum "pom.xml" }}
 
+    - run: |
+        mysql \
+        -c "CREATE database audit4j;"
+
     - run: mvn spring-boot:run
 
 
