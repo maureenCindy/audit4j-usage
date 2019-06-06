@@ -37,6 +37,8 @@ jobs:
         environment:
           DATABASE_URL: "jdbc:mysql://localhost:3306/audit4j?useSSL=FALSE"
 
+
+
     # Download and cache dependencies
     - restore_cache:
         keys:
@@ -44,11 +46,15 @@ jobs:
         # fallback to using the latest cache if no exact match is found
         - audit4jusage-
 
-    - run: mvn install
-
-    - run: mvn spring-boot:run
+    - run: mvn dependency-tree:offline
 
     - save_cache:
         paths:
         - ~/.m2
         key: audit4jusage-{{ checksum "pom.xml" }}
+
+    - run: mvn spring-boot:run
+
+
+    - store_test_results:
+        path: target/surefire-reports
