@@ -44,21 +44,9 @@ jobs:
         # fallback to using the latest cache if no exact match is found
         - audit4jusage-
 
+    - run: mvn spring-boot:run
 
     - save_cache:
         paths:
         - ~/.m2
         key: audit4jusage-{{ checksum "pom.xml" }}
-
-    # run tests!
-    - run:
-        name: integration tests
-        command: mvn integration-test
-
-    - run: mvn package
-
-    - store_test_results:
-            path: target/surefire-reports
-
-    - store_artifacts:
-            path: target/audit4jusage-1.0-SNAPSHOT.jar
