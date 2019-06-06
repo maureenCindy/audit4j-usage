@@ -34,7 +34,6 @@ jobs:
     - run:
         name: Wait for Database Connection
         # preinstalled in circleci/* docker image
-        command: create database audit4j
         command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
         environment:
           DATABASE_URL: "jdbc:mysql://localhost:3306/audit4j?useSSL=FALSE"
