@@ -52,7 +52,7 @@ jobs:
         key: audit4jusage-{{ checksum "pom.xml" }}
 
     # run tests!
-    - run: mvn integration-test
+    - run: mvn test -B -Dsurefire.excludesFile=surefire_classnames_ignore_list -Dfailsafe.excludesFile=failsafe_classnames_ignore_list
 
     - run: mvn package
 
