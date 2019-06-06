@@ -36,7 +36,7 @@ jobs:
         # preinstalled in circleci/* docker image
         command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
         environment:
-          DATABASE_URL: "jdbc:mysql://localhost:3306/circle-test?useSSL=FALSE"
+          DATABASE_URL: "jdbc:mysql://127.0.0.1:3306/circle-test?useSSL=FALSE"
 
 
 
