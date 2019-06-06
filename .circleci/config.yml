@@ -29,7 +29,7 @@ jobs:
     - checkout
 
     - run: sudo apt-get install mysql-client
-    - run: service mysql start
+    - run: service mysqladmin start
 
     - run:
         name: Wait for Database Connection
