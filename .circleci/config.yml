@@ -22,6 +22,7 @@ jobs:
         MYSQL_HOST: 127.0.0.1
         MYSQL_USER: root
         MYSQL_DATABASE: auditdb
+        MYSQL_ROOT_PASSWORD: password
 
     working_directory: ~/audit4jusage
 
@@ -40,7 +41,7 @@ jobs:
         # prepare the database
     - run:
         name: Mysql database
-        command: mysql -p -h 127.0.0.1 -u root -e "create database auditdb;"
+        command: mysql -p password -h 127.0.0.1 -u root -e "create database auditdb;"
 
     # Download and cache dependencies
     - restore_cache:
