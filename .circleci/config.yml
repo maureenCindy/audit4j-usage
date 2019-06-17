@@ -22,7 +22,7 @@ jobs:
         MYSQL_HOST: 127.0.0.1
         MYSQL_USER: myuser
         MYSQL_PASSWORD: password
-        MYSQL_DATABASE: |
+        MYSQL_DATABASE:|
           auditdb
           testdb
 
