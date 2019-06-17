@@ -21,6 +21,8 @@ jobs:
         MYSQL_ROOT_PASSWORD: 'P@ssw0rd#'
         MYSQL_USER: root
         MYSQL_DATABASE: auditdb
+        MYSQL_PASSWORD: 'P@ssw0rd#'
+
     working_directory: ~/audit4jusage
 
     environment:
@@ -33,10 +35,7 @@ jobs:
     - run:
         name: Wait for Database Connection
         # preinstalled in circleci/* docker image
-        command:
-        - dockerize -wait tcp://localhost:3306 -timeout 120s
-        - mysqladmin create auditdb --host="127.0.0.1" --user="root" --password="P@ssw0rd#"
-
+        command: dockerize -wait tcp://localhost:3306 -timeout 120s
 
     # Download and cache dependencies
     - restore_cache:
@@ -47,6 +46,11 @@ jobs:
 
         # prepare the database
     #- run: mysqladmin create auditdb --host="127.0.0.1" --user="root" --password="P@ssw0rd#"
+    - run:
+        name: Install MySQL CLI
+        command: |
+          sudo apt-get install mysql-client
+          mysql -h 127.0.0.1 -u root -pPassw0rd# create database auditdb
 
     - run: mvn dependency:go-offline
 
