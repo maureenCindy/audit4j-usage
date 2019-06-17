@@ -18,11 +18,13 @@ jobs:
       # Service container image available at `host: localhost`
     - image: circleci/mysql:8.0.11
       environment:
+        MYSQL_ROOT_PASSWORD: password
         MYSQL_HOST: 127.0.0.1
         MYSQL_USER: myuser
-        MYSQL_DATABASE: auditdb
-        MYSQL_ROOT_PASSWORD: password
         MYSQL_PASSWORD: password
+        MYSQL_DATABASE: |
+          auditdb
+          testdb
 
     working_directory: ~/audit4jusage
 
@@ -39,7 +41,6 @@ jobs:
         # preinstalled in circleci/* docker image
         command: dockerize -wait tcp://localhost:3306 -timeout 1m
 
-
     # Download and cache dependencies
     - restore_cache:
         keys:
@@ -53,9 +54,6 @@ jobs:
         paths:
         - ~/.m2
         key: audit4jusage-{{ checksum "pom.xml" }}
-
-    - run: mvn spring-boot:run
-
 
     - store_test_results:
         path: target/surefire-reports
