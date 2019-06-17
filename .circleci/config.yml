@@ -50,7 +50,9 @@ jobs:
 
     - run: mvn dependency:go-offline
 
-    - run: mvn clean install
+    #- run: mvn clean install
+
+    - run: mvn spring-boot:run
 
     - save_cache:
         paths:

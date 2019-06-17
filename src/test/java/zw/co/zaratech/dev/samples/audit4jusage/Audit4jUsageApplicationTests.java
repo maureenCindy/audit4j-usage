@@ -37,7 +37,6 @@ public class Audit4jUsageApplicationTests {
     }
 
 
-
     @WithMockUser
     @Test
     public void givenAuthRequestOnPrivateService_shouldSucceedWith200() throws Exception {
