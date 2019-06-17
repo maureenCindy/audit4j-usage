@@ -18,6 +18,7 @@ jobs:
       # Service container image available at `host: localhost`
     - image: circleci/mysql:5.7.26
       environment:
+        MYSQL_ALLOW_EMPTY_PASSWORD: true
         MYSQL_HOST: 127.0.0.1
         MYSQL_ROOT_PASSWORD: ''
         MYSQL_USER: root
