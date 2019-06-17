@@ -18,19 +18,12 @@ jobs:
       # Service container image available at `host: localhost`
     - image: circleci/mysql:8.0.11
       environment:
-        MYSQL_ROOT_PASSWORD: password2
+        MYSQL_ALLOW_EMPTY_PASSWORD: yes
+        MYSQL_ROOT_PASSWORD: ''
         MYSQL_HOST: 127.0.0.1
-        MYSQL_USER: myuser1
-        MYSQL_PASSWORD: password1
-        MYSQL_DATABASE: auditdb1
-
-    - image: circleci/mysql:8.0.11
-      environment:
-        MYSQL_ROOT_PASSWORD: password2
-        MYSQL_HOST: 127.0.0.1
-        MYSQL_USER: myuser2
-        MYSQL_PASSWORD: password2
-        MYSQL_DATABASE: auditdb2
+        MYSQL_USER: myuser
+        MYSQL_PASSWORD: password
+        MYSQL_DATABASE: auditdb
 
 
     working_directory: ~/audit4jusage
@@ -41,12 +34,17 @@ jobs:
 
     steps:
     - checkout
-    - run: sudo apt install -y mysql-client
+    - run: sudo apt-get install mysql-client --allow-unauthenticated
+    - run: mysql -u root -e "create database test1" --protocol=tcp
+    - run: mysql -u root -e "create database test2" --protocol=tcp
+    - run: mysql -u root -e "create database auditdb2" --protocol=tcp
 
     - run:
         name: Wait for Database Connection
         # preinstalled in circleci/* docker image
         command: dockerize -wait tcp://localhost:3306 -timeout 1m
+
+
 
     # Download and cache dependencies
     - restore_cache:
