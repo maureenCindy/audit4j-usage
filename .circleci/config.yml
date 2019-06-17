@@ -18,6 +18,7 @@ jobs:
       # Service container image available at `host: localhost`
     - image: circleci/mysql:5.7.26
       environment:
+        MYSQL_HOST: 127.0.0.1
         MYSQL_ROOT_PASSWORD: ''
         MYSQL_USER: root
         MYSQL_DATABASE: auditdb
@@ -31,11 +32,16 @@ jobs:
 
     steps:
     - checkout
+    - run: sudo apt install -y mysql-client
 
     - run:
         name: Wait for Database Connection
         # preinstalled in circleci/* docker image
         command: dockerize -wait tcp://localhost:3306 -timeout 240s
+        # prepare the database
+    - run:
+        name: Mysql database
+        command: mysql -h 127.0.0.1 -u root -e "create database auditdb;"
 
     # Download and cache dependencies
     - restore_cache:
@@ -43,14 +49,6 @@ jobs:
         - audit4jusage-{{ checksum "pom.xml" }}
         # fallback to using the latest cache if no exact match is found
         - audit4jusage-
-
-        # prepare the database
-    #- run: mysqladmin create auditdb --host="127.0.0.1" --user="root" --password="P@ssw0rd#"
-    - run:
-        name: Install MySQL CLI
-        command: |
-          sudo apt-get install mysql-client
-          mysql -h localhost -u 'root' -p '' create database auditdb
 
     - run: mvn dependency:go-offline
 
