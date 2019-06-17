@@ -38,10 +38,7 @@ jobs:
         name: Wait for Database Connection
         # preinstalled in circleci/* docker image
         command: dockerize -wait tcp://localhost:3306 -timeout 1m
-        # prepare the database
-    - run:
-        name: Mysql database
-        command: mysql -p password -h 127.0.0.1 -u myuser -e "create database auditdb;"
+
 
     # Download and cache dependencies
     - restore_cache:
