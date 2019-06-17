@@ -22,7 +22,7 @@ jobs:
         MYSQL_HOST: 127.0.0.1
         MYSQL_USER: root
         MYSQL_DATABASE: auditdb
-        MYSQL_PASSWORD: 'P@ssw0rd#'
+        MYSQL_PASSWORD: ''
 
     working_directory: ~/audit4jusage
 
