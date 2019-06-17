@@ -30,9 +30,7 @@ jobs:
     steps:
     - checkout
 
-    - run:
-      name: Install MySQL CLI; create sample database
-      command: mysql create database auditdb -h 127.0.0.1 -u root -pssw0rd#
+    - run: mysql create database auditdb -h 127.0.0.1 -u root -pssw0rd#
 
     - run:
         name: Wait for Database Connection
