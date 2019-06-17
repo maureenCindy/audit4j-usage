@@ -9,7 +9,11 @@ jobs:
     docker:
     # specify the version you desire here
     - image: circleci/openjdk:8u212-b04-stretch
-
+      environment:
+        DB_ROOT_USER: root
+        DB_URL: jdbc:mysql://localhost:3306/auditdb2
+        DB_DRIVER: com.mysql.cj.jdbc.Driver
+        DB_PASS: ""
         # Specify service dependencies here if necessary
         # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/

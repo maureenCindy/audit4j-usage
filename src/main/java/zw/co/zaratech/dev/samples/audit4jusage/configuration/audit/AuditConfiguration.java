@@ -9,9 +9,11 @@ import org.audit4j.core.layout.SimpleLayout;
 import org.audit4j.handler.db.DatabaseAuditHandler;
 import org.audit4j.integration.spring.AuditAspect;
 import org.audit4j.integration.spring.SpringAudit4jConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.core.env.Environment;
 import zw.co.zaratech.dev.samples.audit4jusage.customs.MyMetaData;
 
 import java.util.ArrayList;
@@ -25,6 +27,9 @@ import java.util.Map;
 @Configuration
 @EnableAspectJAutoProxy
 public class AuditConfiguration {
+
+    @Autowired
+    private Environment environment;
 
     @Bean
     public Layout layout() {
@@ -40,10 +45,10 @@ public class AuditConfiguration {
     public DatabaseAuditHandler databaseHandler() {
         DatabaseAuditHandler databaseHandler = new DatabaseAuditHandler();
         databaseHandler.setEmbedded("false");
-        databaseHandler.setDb_user("root");
-        databaseHandler.setDb_password("");
-        databaseHandler.setDb_url("jdbc:mysql://localhost:3306/auditdb2");
-        databaseHandler.setDb_driver("com.mysql.cj.jdbc.Driver");
+        databaseHandler.setDb_user(environment.getRequiredProperty("DB_ROOT_USER"));
+        databaseHandler.setDb_password(environment.getRequiredProperty("DB_PASS"));
+        databaseHandler.setDb_url(environment.getRequiredProperty("DB_URL"));
+        databaseHandler.setDb_driver(environment.getRequiredProperty("DB_DRIVER"));
         return databaseHandler;
     }
 

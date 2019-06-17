@@ -98,7 +98,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="29" />
-          <entry key="java" value="1775" />
+          <entry key="java" value="1777" />
           <entry key="kt" value="534" />
           <entry key="log" value="9" />
           <entry key="script" value="18" />
@@ -109,7 +109,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1775" />
+          <entry key="JAVA" value="1777" />
           <entry key="Kotlin" value="534" />
           <entry key="Log" value="9" />
           <entry key="PLAIN_TEXT" value="47" />
@@ -140,7 +140,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/zw/co/zaratech/dev/samples/audit4jusage/configuration/audit/AuditConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="281">
-              <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+              <caret line="66" column="44" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -306,7 +306,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560811143640" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560811403687" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -423,7 +423,7 @@
       <workItem from="1558426592698" duration="23974000" />
       <workItem from="1558902544572" duration="18000" />
       <workItem from="1559717263013" duration="12185000" />
-      <workItem from="1560756275796" duration="15724000" />
+      <workItem from="1560756275796" duration="16104000" />
     </task>
     <servers />
   </component>
@@ -436,7 +436,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82697000" />
+    <option name="totallyTimeSpent" value="83077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
@@ -727,7 +727,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/zw/co/zaratech/dev/samples/audit4jusage/configuration/audit/AuditConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
-          <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+          <caret line="66" column="44" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
