@@ -4,7 +4,6 @@
     <list default="true" id="c8850a8a-142c-4769-bb34-682ced965028" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zw/co/zaratech/dev/samples/audit4jusage/configuration/audit/AuditConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zw/co/zaratech/dev/samples/audit4jusage/configuration/audit/AuditConfiguration.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -105,7 +104,7 @@
           <entry key="script" value="18" />
           <entry key="sql" value="19" />
           <entry key="xml" value="767" />
-          <entry key="yml" value="673" />
+          <entry key="yml" value="674" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -116,7 +115,7 @@
           <entry key="PLAIN_TEXT" value="47" />
           <entry key="Scratch" value="19" />
           <entry key="XML" value="767" />
-          <entry key="YAML" value="673" />
+          <entry key="YAML" value="674" />
         </counts>
       </usages-collector>
     </session>
@@ -137,7 +136,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/zw/co/zaratech/dev/samples/audit4jusage/configuration/audit/AuditConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="321">
@@ -149,11 +148,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+            <state relative-caret-position="127">
+              <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -222,8 +221,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/zw/co/zaratech/dev/samples/audit4jusage/Audit4jUsageApplicationTests.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/.circleci/config.yml" />
         <option value="$PROJECT_DIR$/src/main/java/zw/co/zaratech/dev/samples/audit4jusage/configuration/audit/AuditConfiguration.java" />
+        <option value="$PROJECT_DIR$/.circleci/config.yml" />
       </list>
     </option>
   </component>
@@ -351,7 +350,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560766698761" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560766750303" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -468,7 +467,7 @@
       <workItem from="1558426592698" duration="23974000" />
       <workItem from="1558902544572" duration="18000" />
       <workItem from="1559717263013" duration="12185000" />
-      <workItem from="1560756275796" duration="3345000" />
+      <workItem from="1560756275796" duration="3608000" />
     </task>
     <servers />
   </component>
@@ -478,7 +477,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70318000" />
+    <option name="totallyTimeSpent" value="70581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
@@ -749,13 +748,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/zw/co/zaratech/dev/samples/audit4jusage/Audit4JUsageApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -770,6 +762,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
         </state>
       </provider>
     </entry>

@@ -30,7 +30,7 @@ jobs:
     steps:
     - checkout
 
-    - run: mysql create database auditdb -h 127.0.0.1 -u root -pssw0rd#
+    - run: mysqladmin create auditdb -h 127.0.0.1 -u root -pssw0rd#
 
     - run:
         name: Wait for Database Connection
