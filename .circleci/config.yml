@@ -34,16 +34,16 @@ jobs:
 
     steps:
     - checkout
-    - run: sudo apt-get install mysql-client --allow-unauthenticated
-    - run: mysql -u root -e "create database test1" --protocol=tcp
-    - run: mysql -u root -e "create database test2" --protocol=tcp
-    - run: mysql -u root -e "create database auditdb2" --protocol=tcp
 
     - run:
         name: Wait for Database Connection
         # preinstalled in circleci/* docker image
         command: dockerize -wait tcp://localhost:3306 -timeout 1m
 
+    - run: sudo apt-get install mysql-client --allow-unauthenticated
+      - run: mysql -u root -e "create database test1" --protocol=tcp
+      - run: mysql -u root -e "create database test2" --protocol=tcp
+      - run: mysql -u root -e "create database auditdb2" --protocol=tcp
 
 
     # Download and cache dependencies
