@@ -18,7 +18,7 @@ jobs:
       # Service container image available at `host: localhost`
     - image: circleci/mysql:5.7.26
       environment:
-        MYSQL_ROOT_PASSWORD: 'P@ssw0rd#'
+        MYSQL_ROOT_PASSWORD: ''
         MYSQL_USER: root
         MYSQL_DATABASE: auditdb
         MYSQL_PASSWORD: 'P@ssw0rd#'
@@ -50,7 +50,7 @@ jobs:
         name: Install MySQL CLI
         command: |
           sudo apt-get install mysql-client
-          mysql -h 127.0.0.1 -u root -pPassw0rd# create database auditdb
+          mysql -h 127.0.0.1 -u 'root' -p '' create database auditdb
 
     - run: mvn dependency:go-offline
 
