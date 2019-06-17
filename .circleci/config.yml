@@ -24,7 +24,6 @@ jobs:
       # Customize the JVM maximum heap limit
       MAVEN_OPTS: -Xmx3200m
       MYSQL_ROOT_PASSWORD: 'P@ssw0rd#'
-      MYSQL_DATABASE: auditdb
 
     steps:
     - checkout
@@ -45,8 +44,6 @@ jobs:
         - audit4jusage-
 
         # prepare the database
-    - run: /etc/init.d/mysql start
-    - run: /etc/init.d/mysql status
     - run: mysqladmin create auditdb --host="localhost" --user="root" --password="P@ssw0rd#"
 
     - run: mvn dependency:go-offline

@@ -1,3 +1,1 @@
-05/22/2019 12:25:07|5851995970418196878|user|0:0:0:0:0:0:0:1|HelloService.hello==>name java.lang.String:user,
-05/22/2019 12:25:16|-4067519567533358500|user|0:0:0:0:0:0:0:1|HelloService.hello==>name java.lang.String:user,
-05/22/2019 20:35:34|2189544174370570744|user|0:0:0:0:0:0:0:1|HelloService.hello==>loggedInusername java.lang.String:user,
+05/22/2019 20:58:37|6143227650899462330|user|0:0:0:0:0:0:0:1|HelloService.hello==>loggedInUsername java.lang.String:user,
