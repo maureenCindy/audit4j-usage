@@ -41,9 +41,9 @@ jobs:
         command: dockerize -wait tcp://localhost:3306 -timeout 1m
 
     - run: sudo apt-get install mysql-client --allow-unauthenticated
-    - run: mysql -u root -e "create database test1" --protocol=tcp
-    - run: mysql -u root -e "create database test2" --protocol=tcp
-    - run: mysql -u root -e "create database auditdb2" --protocol=tcp
+    - run: mysql -h 127.0.0.1 -u root -e "create database test1"
+    - run: mysql -h 127.0.0.1 -u root -e "create database test2"
+    - run: mysql -h 127.0.0.1 -u root -e "create database auditdb2"
 
 
     # Download and cache dependencies
