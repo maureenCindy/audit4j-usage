@@ -50,7 +50,7 @@ jobs:
         name: Install MySQL CLI
         command: |
           sudo apt-get install mysql-client
-          mysql -h 127.0.0.1 -u 'root' -p '' create database auditdb
+          mysql -h localhost -u 'root' -p '' create database auditdb
 
     - run: mvn dependency:go-offline
 
