@@ -18,9 +18,9 @@ jobs:
       # Service container image available at `host: localhost`
     - image: circleci/mysql:5.7.26
       environment:
-        MYSQL_PASSWORD: ''
+        MYSQL_ROOT_PASSWORD: 'P@ssw0rd#'
         MYSQL_USER: root
-        MYSQL_DB: auditdb
+        MYSQL_DATABASE: auditdb
     working_directory: ~/audit4jusage
 
     environment:
@@ -30,7 +30,11 @@ jobs:
     steps:
     - checkout
 
-    - run: sudo apt-get install mysql-client
+    - run:
+      name: Install MySQL CLI; create sample database
+      command: |
+      sudo apt-get install mysql-client
+      mysql create database auditdb -h 127.0.0.1 -u root -pssw0rd#
 
     - run:
         name: Wait for Database Connection
@@ -46,7 +50,7 @@ jobs:
         - audit4jusage-
 
         # prepare the database
-    - run: mysqladmin create auditdb
+    #- run: mysqladmin create auditdb --host="localhost" --user="root" --password="P@ssw0rd#"
 
     - run: mvn dependency:go-offline
 
