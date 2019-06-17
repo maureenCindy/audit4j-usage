@@ -40,9 +40,9 @@ public class AuditConfiguration {
     public DatabaseAuditHandler databaseHandler() {
         DatabaseAuditHandler databaseHandler = new DatabaseAuditHandler();
         databaseHandler.setEmbedded("false");
-        databaseHandler.setDb_user("${MYSQL_USER}");
-        databaseHandler.setDb_password("${MYSQL_PASSWORD}");
-        databaseHandler.setDb_url("jdbc:mysql://localhost:3306/${MYSQL_DB}");
+        databaseHandler.setDb_user("root");
+        databaseHandler.setDb_password("");
+        databaseHandler.setDb_url("jdbc:mysql://localhost:3306/auditdb");
         databaseHandler.setDb_driver("com.mysql.cj.jdbc.Driver");
         return databaseHandler;
     }
