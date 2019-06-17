@@ -22,9 +22,9 @@ jobs:
         MYSQL_HOST: 127.0.0.1
         MYSQL_USER: myuser
         MYSQL_PASSWORD: password
-        MYSQL_DATABASE:|
-          auditdb
-          testdb
+        MYSQL_DATABASE: |
+          - auditdb
+          - testdb
 
     working_directory: ~/audit4jusage
 
@@ -49,6 +49,8 @@ jobs:
         - audit4jusage-
 
     - run: mvn dependency:go-offline
+
+    -run: mvn clean install
 
     - save_cache:
         paths:
