@@ -16,7 +16,7 @@ jobs:
       # - image: circleci/postgres:9.4
 
       # Service container image available at `host: localhost`
-    - image: circleci/mysql:8.0.11
+    - image: circleci/mysql:5.7
       environment:
         MYSQL_ALLOW_EMPTY_PASSWORD: yes
         MYSQL_ROOT_PASSWORD: ''
@@ -40,7 +40,7 @@ jobs:
         # preinstalled in circleci/* docker image
         command: dockerize -wait tcp://localhost:3306 -timeout 1m
 
-    - run: sudo apt-get install mysql-client --allow-unauthenticated --default-authentication-plugin=mysql_native_password
+    - run: sudo apt-get install mysql-client --allow-unauthenticated
     - run: mysql -h 127.0.0.1 -u root -e "create database test1"
     - run: mysql -h 127.0.0.1 -u root -e "create database test2"
     - run: mysql -h 127.0.0.1 -u root -e "create database auditdb2"
