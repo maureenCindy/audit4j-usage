@@ -37,7 +37,7 @@ jobs:
     - run:
         name: Wait for Database Connection
         # preinstalled in circleci/* docker image
-        command: dockerize -wait tcp://localhost:3306 -timeout 240s
+        command: dockerize -wait tcp://localhost:3306 -timeout 1m
         # prepare the database
     - run:
         name: Mysql database
