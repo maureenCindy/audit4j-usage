@@ -41,7 +41,7 @@ public class AuditConfiguration {
         DatabaseAuditHandler databaseHandler = new DatabaseAuditHandler();
         databaseHandler.setEmbedded("false");
         databaseHandler.setDb_user("root");
-        databaseHandler.setDb_password("password");
+        databaseHandler.setDb_password("pass");
         databaseHandler.setDb_url("jdbc:mysql://localhost:3306/auditdb");
         databaseHandler.setDb_driver("com.mysql.cj.jdbc.Driver");
         return databaseHandler;

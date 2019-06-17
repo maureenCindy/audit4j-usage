@@ -18,13 +18,20 @@ jobs:
       # Service container image available at `host: localhost`
     - image: circleci/mysql:8.0.11
       environment:
-        MYSQL_ROOT_PASSWORD: password
+        MYSQL_ROOT_PASSWORD: password2
         MYSQL_HOST: 127.0.0.1
-        MYSQL_USER: myuser
-        MYSQL_PASSWORD: password
-        MYSQL_DATABASE:
-          - auditdb
-          - testdb
+        MYSQL_USER: myuser1
+        MYSQL_PASSWORD: password1
+        MYSQL_DATABASE: auditdb1
+
+    - image: circleci/mysql:8.0.11
+        environment:
+          MYSQL_ROOT_PASSWORD: password2
+          MYSQL_HOST: 127.0.0.1
+          MYSQL_USER: myuser2
+          MYSQL_PASSWORD: password2
+          MYSQL_DATABASE: auditdb2
+
 
     working_directory: ~/audit4jusage
 
