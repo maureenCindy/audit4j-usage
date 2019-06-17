@@ -46,7 +46,7 @@ jobs:
         - audit4jusage-
 
         # prepare the database
-    - run: mysqladmin create auditdb --host="localhost" --user="root"
+    - run: mysqladmin create auditdb
 
     - run: mvn dependency:go-offline
 
