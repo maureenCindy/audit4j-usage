@@ -33,7 +33,9 @@ jobs:
     - run:
         name: Wait for Database Connection
         # preinstalled in circleci/* docker image
-        command: dockerize -wait tcp://localhost:3306 -timeout 120s
+        command:
+        dockerize -wait tcp://localhost:3306 -timeout 120s
+        mysqladmin create auditdb --host="127.0.0.1" --user="root" --password="P@ssw0rd#"
 
 
     # Download and cache dependencies
@@ -44,7 +46,7 @@ jobs:
         - audit4jusage-
 
         # prepare the database
-    - run: mysqladmin create auditdb --host="127.0.0.1" --user="root" --password="P@ssw0rd#"
+    #- run: mysqladmin create auditdb --host="127.0.0.1" --user="root" --password="P@ssw0rd#"
 
     - run: mvn dependency:go-offline
 
