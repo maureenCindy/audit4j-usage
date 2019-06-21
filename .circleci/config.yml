@@ -26,10 +26,10 @@ jobs:
       environment:
         MYSQL_ALLOW_EMPTY_PASSWORD: yes
         MYSQL_ROOT_PASSWORD: ''
-        MYSQL_HOST: 127.0.0.1
-        MYSQL_USER: myuser
-        MYSQL_PASSWORD: password
-        MYSQL_DATABASE: auditdb
+        #MYSQL_HOST: 127.0.0.1
+        #MYSQL_USER: myuser
+        #MYSQL_PASSWORD: password
+        #MYSQL_DATABASE: auditdb
 
     working_directory: ~/audit4jusage
 
