@@ -9,13 +9,15 @@ jobs:
     docker:
     # specify the version you desire here
     - image: circleci/openjdk:8u212-b04-stretch
+      #specify system properties
       environment:
         DB_ROOT_USER: root
         DB_URL: jdbc:mysql://localhost:3306/auditdb2
         DB_DRIVER: com.mysql.cj.jdbc.Driver
         DB_PASS: ""
-        # Specify service dependencies here if necessary
-        # CircleCI maintains a library of pre-built images
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
@@ -28,7 +30,6 @@ jobs:
         MYSQL_USER: myuser
         MYSQL_PASSWORD: password
         MYSQL_DATABASE: auditdb
-
 
     working_directory: ~/audit4jusage
 
@@ -44,7 +45,7 @@ jobs:
         # preinstalled in circleci/* docker image
         command: dockerize -wait tcp://localhost:3306 -timeout 1m
 
-    - run: sudo apt-get install mysql-client --allow-unauthenticated
+    - run: sudo apt-get install mysql-client
     - run: mysql -h 127.0.0.1 -u root -e "create database test1"
     - run: mysql -h 127.0.0.1 -u root -e "create database test2"
     - run: mysql -h 127.0.0.1 -u root -e "create database auditdb2"
