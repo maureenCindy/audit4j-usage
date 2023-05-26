@@ -31,7 +31,7 @@
             <relativePath />
     </parent>
     <properties>
-        <springboot.version>2.1.4.RELEASE</springboot.version>
+        <springboot.version>2.5.15</springboot.version>
         <spring.version>5.1.6.RELEASE</spring.version>
         <audit4j.version>2.5.0</audit4j.version>
         <aspectjweaver.version>1.8.13</aspectjweaver.version>
